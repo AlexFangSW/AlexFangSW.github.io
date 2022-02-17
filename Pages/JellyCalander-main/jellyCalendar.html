@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelly Calendar</title>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="icons/css/all.css">
+    <link rel="stylesheet" href="styles/calender.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/addActivaty.css">
+    <link rel="stylesheet" href="styles/menu2.css">
+</head>
+<body>
+    <div class="container0">
+        <div class="container">
+            <!-- Top menu bar-->
+            <div class="menu">
+                <div class="first"><button class="lastMonth first"><i class="fas fa-angle-left"></i></button></div>
+                <div><button class="month"></button></div>
+                <div></i><button class="nextMonth"><i class="fas fa-angle-right"></i></button></div>
+                <div><button class="year"></button></div>
+                <div><button class="home"><i class="fas fa-home"></i></button></div>
+                <div class="last"><button class="plus last" onclick="showAddActivity()"><i class="fas fa-plus"></i></button></div>
+            </div>
+            <div class="menu2">
+                <div class="first"><button class="submit first"><i class="fas fa-check"></i></button></div>
+                <div><button class="undo"><i class="fas fa-undo-alt"></i></button></div>
+                <div class="last"><button class="cancel last"><i class="fas fa-times"></i></button></div>
+            </div>
+            <!-- Calendar content -->
+            <div class="calendar"></div>
+        </div>
+        <!-- Add activaty -->
+        <div class="addActivaty">
+            <div class="actName">
+                <input id="actName" class="actName fa" type="text" placeholder="事件.." autocomplete="off" required>
+                <label class="fas fa-pencil-alt input-icon" for="actName"></label>    
+            </div>
+            <div class="colors">
+                <button class="C1"><i class="fas fa-check"></i></button>
+                <button class="C2"><i class="fas fa-check"></i></button>
+                <button class="C3"><i class="fas fa-check"></i></button>
+                <button class="C4"><i class="fas fa-check"></i></button>
+                <button class="C5"><i class="fas fa-check"></i></button>
+                <button class="C6"><i class="fas fa-check"></i></button>
+                <button class="C7"><i class="fas fa-check"></i></button>
+                <button class="C8"><i class="fas fa-check"></i></button>
+            </div>
+            <div class="time">
+                <input type="time" class="s Time" id="sTime" value="08:00">
+                <i class="fas fa-caret-right Label"></i>
+                <input type="time" class="e Time" id="eTime" value="09:00">
+            </div>
+            <div class="buttons">
+                <button class="submit"><i class="fas fa-check"></i></button>
+                <button class="exit" onclick="exitAddActivaty()"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="scripts/globals.js"></script>
+    <script src="scripts/calendarScripts.js"></script>
+    <script src="scripts/addActivity.js"></script>
+</body>
+</html>
